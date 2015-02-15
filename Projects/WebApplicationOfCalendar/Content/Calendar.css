@@ -1,0 +1,28 @@
+﻿.month_calendar {
+    
+}
+
+.years_line {
+    text-align:center;
+    width:50px;
+    column-span:all;
+    background-color:#a6d3dd;
+}
+
+.sunday_row {
+    text-align:center;
+    width:50px;
+    background-color:#FFCC99;
+}
+
+.ordinary_row {
+    text-align:center;
+    width:50px;
+    background-color:#EEEEEE;
+}
+
+.saturday_row {
+    text-align:center;
+    width:50px;
+    background-color:#C7D8ED;
+}
