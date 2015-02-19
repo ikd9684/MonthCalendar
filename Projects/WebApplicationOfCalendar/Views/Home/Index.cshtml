@@ -7,70 +7,22 @@
 <body>
     <table class="month_calendar">
         <tr>
-            <td class="years_line" colspan="7">@Model.DisplayYear 年 @Model.DisplayMonth 月</td>
+            <th class="years_line" colspan="7">@Model.DisplayYear 年 @Model.DisplayMonth 月</th>
         </tr>
         <tr>
-            <td class="sunday_row">@WeekdayCode.sunday</td>
-            <td class="ordinary_row">@WeekdayCode.monday</td>
-            <td class="ordinary_row">@WeekdayCode.tuesday</td>
-            <td class="ordinary_row">@WeekdayCode.wednesday</td>
-            <td class="ordinary_row">@WeekdayCode.thursday</td>
-            <td class="ordinary_row">@WeekdayCode.friday</td>
-            <td class="saturday_row">@WeekdayCode.saturday</td>
+          @foreach (var weekday in WeekdayCode.weekdays)
+          {
+            <td>@weekday</td>
+          }
         </tr>
+      @foreach (var list in Model.WeekList)
+      {
         <tr>
-            <td class="sunday_row">@Model.firstWeekList[0]</td>
-            <td class="ordinary_row">@Model.firstWeekList[1]</td>
-            <td class="ordinary_row">@Model.firstWeekList[2]</td>
-            <td class="ordinary_row">@Model.firstWeekList[3]</td>
-            <td class="ordinary_row">@Model.firstWeekList[4]</td>
-            <td class="ordinary_row">@Model.firstWeekList[5]</td>
-            <td class="saturday_row">@Model.firstWeekList[6]</td>
+          @foreach (var weekday in list)
+          {
+            <td class="sunday_row">@weekday</td>
+          }
         </tr>
-        <tr>
-            <td class="sunday_row">@Model.secondWeekList[0]</td>
-            <td class="ordinary_row">@Model.secondWeekList[1]</td>
-            <td class="ordinary_row">@Model.secondWeekList[2]</td>
-            <td class="ordinary_row">@Model.secondWeekList[3]</td>
-            <td class="ordinary_row">@Model.secondWeekList[4]</td>
-            <td class="ordinary_row">@Model.secondWeekList[5]</td>
-            <td class="saturday_row">@Model.secondWeekList[6]</td>
-        </tr>
-        <tr>
-            <td class="sunday_row">@Model.thirdWeekList[0]</td>
-            <td class="ordinary_row">@Model.thirdWeekList[1]</td>
-            <td class="ordinary_row">@Model.thirdWeekList[2]</td>
-            <td class="ordinary_row">@Model.thirdWeekList[3]</td>
-            <td class="ordinary_row">@Model.thirdWeekList[4]</td>
-            <td class="ordinary_row">@Model.thirdWeekList[5]</td>
-            <td class="saturday_row">@Model.thirdWeekList[6]</td>
-        </tr>
-        <tr>
-            <td class="sunday_row">@Model.fourthWeekList[0]</td>
-            <td class="ordinary_row">@Model.fourthWeekList[1]</td>
-            <td class="ordinary_row">@Model.fourthWeekList[2]</td>
-            <td class="ordinary_row">@Model.fourthWeekList[3]</td>
-            <td class="ordinary_row">@Model.fourthWeekList[4]</td>
-            <td class="ordinary_row">@Model.fourthWeekList[5]</td>
-            <td class="saturday_row">@Model.fourthWeekList[6]</td>
-        </tr>
-        <tr>
-            <td class="sunday_row">@Model.fifthWeekList[0]</td>
-            <td class="ordinary_row">@Model.fifthWeekList[1]</td>
-            <td class="ordinary_row">@Model.fifthWeekList[2]</td>
-            <td class="ordinary_row">@Model.fifthWeekList[3]</td>
-            <td class="ordinary_row">@Model.fifthWeekList[4]</td>
-            <td class="ordinary_row">@Model.fifthWeekList[5]</td>
-            <td class="saturday_row">@Model.fifthWeekList[6]</td>
-        </tr>
-        <tr>
-            <td class="sunday_row">@Model.sixthWeekList[0]</td>
-            <td class="ordinary_row">@Model.sixthWeekList[1]</td>
-            <td class="ordinary_row">@Model.sixthWeekList[2]</td>
-            <td class="ordinary_row">@Model.sixthWeekList[3]</td>
-            <td class="ordinary_row">@Model.sixthWeekList[4]</td>
-            <td class="ordinary_row">@Model.sixthWeekList[5]</td>
-            <td class="saturday_row">@Model.sixthWeekList[6]</td>
-        </tr>
-    </table>
+      }
+     </table>
 </body>

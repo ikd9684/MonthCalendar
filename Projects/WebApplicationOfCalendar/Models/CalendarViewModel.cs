@@ -13,11 +13,6 @@ namespace WebApplicationOfCalendar.Models
     {
         public int DisplayYear { get; set; }
         public int DisplayMonth { get; set; }
-        public List<string> firstWeekList { get; set; }
-        public List<string> secondWeekList { get; set; }
-        public List<string> thirdWeekList { get; set; }
-        public List<string> fourthWeekList { get; set; }
-        public List<string> fifthWeekList { get; set; }
-        public List<string> sixthWeekList { get; set; }
+        public List<List<string>> WeekList { get; set; }
     }
 }

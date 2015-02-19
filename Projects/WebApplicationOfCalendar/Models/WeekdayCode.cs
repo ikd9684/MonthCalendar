@@ -18,5 +18,16 @@ namespace WebApplicationOfCalendar.Models
         public const string thursday = "木";
         public const string friday = "金";
         public const string saturday = "土";
+
+        public static readonly string[] weekdays
+            = {
+                  sunday,
+                  monday,
+                  tuesday,
+                  wednesday,
+                  thursday,
+                  friday,
+                  saturday,
+              };
     }
 }

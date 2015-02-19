@@ -40,22 +40,14 @@ namespace WebApplicationOfCalendar.Models
             int dayInMonth = DateTime.DaysInMonth(aViewModel.DisplayYear, aViewModel.DisplayMonth);
 
             // １週目取得
-            aViewModel.firstWeekList = new List<string>(getFirstWeekList(ref dayCount, firstDaysPosition));
+            aViewModel.WeekList = new List<List<string>>();
+            aViewModel.WeekList.Add(new List<string>(getFirstWeekList(ref dayCount, firstDaysPosition)));
 
-            // ２週目取得
-            aViewModel.secondWeekList = new List<string>(getWeekDay(ref dayCount, dayInMonth));
-
-            // ３週目取得
-            aViewModel.thirdWeekList = new List<string>(getWeekDay(ref dayCount, dayInMonth));
-
-            // ４週目取得
-            aViewModel.fourthWeekList = new List<string>(getWeekDay(ref dayCount, dayInMonth));
-
-            // ５週目取得
-            aViewModel.fifthWeekList = new List<string>(getWeekDay(ref dayCount, dayInMonth));
-
-            // ６週目取得
-            aViewModel.sixthWeekList = new List<string>(getWeekDay(ref dayCount, dayInMonth));
+            for (int i = 0; i < 5; i++)
+            {
+                // ２週目取得
+                aViewModel.WeekList.Add(new List<string>(getWeekDay(ref dayCount, dayInMonth)));
+            }
 
             return aViewModel;
         }

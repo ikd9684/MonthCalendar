@@ -2,26 +2,27 @@
     
 }
 
-.years_line {
+th.years_line {
+    font-weight: normal;
     text-align:center;
     width:50px;
     column-span:all;
     background-color:#a6d3dd;
 }
 
-.sunday_row {
+.month_calendar td:nth-child(1) {
     text-align:center;
     width:50px;
     background-color:#FFCC99;
 }
 
-.ordinary_row {
+.month_calendar td {
     text-align:center;
     width:50px;
     background-color:#EEEEEE;
 }
 
-.saturday_row {
+.month_calendar td:nth-child(7) {
     text-align:center;
     width:50px;
     background-color:#C7D8ED;
